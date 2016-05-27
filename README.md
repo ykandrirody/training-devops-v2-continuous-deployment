@@ -1,6 +1,6 @@
 # DevOps Training - Jenkins & XL Deploy - Practical / Usage - using Docker compose
 
-# 1 - Preparation (you can offline after this step)
+# 1 - Preparation (you can be offline after this step)
 
 ## 1.1 - Clone the repository locally
 ```
