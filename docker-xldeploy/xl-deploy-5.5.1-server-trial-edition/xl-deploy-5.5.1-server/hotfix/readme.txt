@@ -1,0 +1,1 @@
+Don't put anything to this folder, use lib or plugins subfolder.

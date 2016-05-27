@@ -1,0 +1,1 @@
+Extensions for XL Deploy can be installed in this directory.
