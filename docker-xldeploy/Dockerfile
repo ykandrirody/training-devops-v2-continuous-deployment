@@ -4,9 +4,10 @@ ENV version 5.5.1
 ENV root /lib
 ENV home ${root}/xl-deploy-${version}-server 
 
-ADD xl-deploy-${version}-server-trial-edition.zip /tmp/xld.zip
-
-RUN unzip -q /tmp/xld.zip -d ${root} && \
+RUN wget \
+      https://dist.xebialabs.com/public/trial/xl-deploy/xl-deploy-${version}-server-trial-edition.zip \
+      -O /tmp/xld.zip \
+    && unzip -q /tmp/xld.zip -d ${root} && \
     rm -R \
       /tmp/xld.zip \
       ${home}/serviceWrapper \
