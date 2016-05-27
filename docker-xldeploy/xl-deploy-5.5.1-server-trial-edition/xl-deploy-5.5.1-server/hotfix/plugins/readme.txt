@@ -1,1 +1,0 @@
-Hotfixes for XL Deploy plugins can be installed in this directory.

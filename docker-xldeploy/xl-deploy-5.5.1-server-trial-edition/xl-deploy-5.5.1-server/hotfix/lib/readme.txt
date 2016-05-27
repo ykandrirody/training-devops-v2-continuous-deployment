@@ -1,1 +1,0 @@
-Hotfixes for the XL Deploy server can be installed in this directory.
