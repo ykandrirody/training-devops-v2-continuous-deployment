@@ -6,7 +6,6 @@ services:
         container_name: jenkins
         links:
         - xldeploy:xldeploy
-        links:
         - gogs:gogs
         ports:
         - 8080:8080
