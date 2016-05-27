@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+    jenkins:
+        image: jenkins:1.651.2
+        container_name: jenkins
+        links:
+        - xldeploy:xldeploy
+        links:
+        - gogs:gogs
+        ports:
+        - 8080:8080
+
+    xldeploy:
+        build: docker-xldeploy/.
+        container_name: xldeploy
+        ports:
+        - 4516:4516
+    gogs:
+        image: gogs/gogs:0.9.13
+        container_name: gogs
+        ports:
+        - 3000:3000
