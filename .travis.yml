@@ -1,0 +1,53 @@
+sudo: required
+
+services:
+  - docker
+
+env:  
+    global:
+        - DOCKER_VERSION=1.11.1-0~trusty
+        - DOCKER_COMPOSE_VERSION=1.7.0
+
+before_install:  
+    # list docker-engine versions
+    - apt-cache madison docker-engine
+
+    # upgrade docker-engine to specific version
+    - sudo apt-get -o Dpkg::Options::="--force-confnew" install -y docker-engine=${DOCKER_VERSION}
+
+    # reinstall docker-compose at specific version
+    - sudo rm /usr/local/bin/docker-compose
+    - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+    - chmod +x docker-compose
+    - sudo mv docker-compose /usr/local/bin
+
+script:  
+    - docker version
+    - docker-compose version
+
+script:
+  - ls -lah
+  
+  # Build images
+  - docker-compose -f ./docker-compose.yml build
+
+  # Start the load balancer
+  - docker-compose -f ./docker-composlb.yml up -d
+
+  # See started containers
+  - docker ps -a
+
+  # Wait to container to start
+  - sleep 60
+
+  # Check Gogs
+  - curl http://localhost:3000/
+  - curl http://localhost:3000/ | grep -q ''
+  
+  # Check XL Deploy
+  - curl http://localhost:4516/
+  - curl http://localhost:4516/ | grep -q ''
+  
+  # Check Jenkins
+  - curl http://localhost:8080/
+  - curl http://localhost:8080/ | grep -q ''
