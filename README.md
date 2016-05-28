@@ -49,12 +49,15 @@ Use this credentials to connect to your Gogs :
 root
 password
 
-docker exec xldeploy ls -ae /dpl
-
 ## 3 - Do the training
 
 Follow the course materials.
 
+Check at the end : 
+```
+docker exec xldeploy ls -ae /dpl
+docker exec xldeploy cat /dpl/README.md
+```
 
 ## 4 - Deallocate resources
 
