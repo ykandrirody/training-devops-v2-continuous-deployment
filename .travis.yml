@@ -1,7 +1,7 @@
 sudo: required
 
 services:
-  - docker
+    - docker
 
 env:  
     global:
@@ -25,29 +25,28 @@ script:
     - docker version
     - docker-compose version
 
-script:
-  - ls -lah
-  
-  # Build images
-  - docker-compose -f ./docker-compose.yml build
+    - ls -lah
 
-  # Start the containers
-  - docker-compose -f ./docker-compose.yml up -d
+    # Build images
+    - docker-compose -f ./docker-compose.yml build
 
-  # See started containers
-  - docker ps -a
+    # Start the containers
+    - docker-compose -f ./docker-compose.yml up -d
 
-  # Wait containers to start
-  - sleep 60
+    # See started containers
+    - docker ps -a
 
-  # Check Gogs
-  - curl http://localhost:3000/
-  - curl http://localhost:3000/ | grep -q 'Found'
-  
-  # Check XL Deploy
-  - curl http://localhost:4516/
-  - curl http://localhost:4516/ | grep -q 'XL Deploy by XebiaLabs'
-  
-  # Check Jenkins
-  - curl http://localhost:8080/
-  - curl http://localhost:8080/ | grep -q 'jenkins-ci'
+    # Wait containers to start
+    - sleep 60
+
+    # Check Gogs
+    - curl http://localhost:3000/
+    - curl http://localhost:3000/ | grep -q 'Found'
+
+    # Check XL Deploy
+    - curl http://localhost:4516/
+    - curl http://localhost:4516/ | grep -q 'XL Deploy by XebiaLabs'
+
+    # Check Jenkins
+    - curl http://localhost:8080/
+    - curl http://localhost:8080/ | grep -q 'jenkins-ci'
