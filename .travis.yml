@@ -31,13 +31,13 @@ script:
   # Build images
   - docker-compose -f ./docker-compose.yml build
 
-  # Start the load balancer
-  - docker-compose -f ./docker-composlb.yml up -d
+  # Start the containers
+  - docker-compose -f ./docker-compose.yml up -d
 
   # See started containers
   - docker ps -a
 
-  # Wait to container to start
+  # Wait containers to start
   - sleep 60
 
   # Check Gogs
