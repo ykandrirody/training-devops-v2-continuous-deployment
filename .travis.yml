@@ -42,12 +42,12 @@ script:
 
   # Check Gogs
   - curl http://localhost:3000/
-  - curl http://localhost:3000/ | grep -q ''
+  - curl http://localhost:3000/ | grep -q 'Found'
   
   # Check XL Deploy
   - curl http://localhost:4516/
-  - curl http://localhost:4516/ | grep -q ''
+  - curl http://localhost:4516/ | grep -q 'XL Deploy by XebiaLabs'
   
   # Check Jenkins
   - curl http://localhost:8080/
-  - curl http://localhost:8080/ | grep -q ''
+  - curl http://localhost:8080/ | grep -q 'jenkins-ci'
