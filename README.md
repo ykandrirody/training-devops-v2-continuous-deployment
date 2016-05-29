@@ -54,14 +54,9 @@ password
 
 ## 3 - Do the training
 
-Follow the course materials : [The practical steps](https://github.com/ykandrirody/training-devops-v2-continuous-deployment/practical.pdf)
+Follow the course materials : 
 
-
-Check at the end : 
-```
-docker exec xldeploy ls -ae /dpl
-docker exec xldeploy cat /dpl/README.md
-```
+[The practical steps](https://github.com/ykandrirody/training-devops-v2-continuous-deployment/blob/master/practical.pdf)
 
 ## 4 - Deallocate resources
 
