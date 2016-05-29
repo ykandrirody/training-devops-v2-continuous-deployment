@@ -41,16 +41,8 @@ http://localhost:8080/
 ##  2.3 - Connect to XL Deploy :
 http://localhost:4516/
 
-Use this credentials to connect to your XL Deploy :
-admin
-password
-
-##  2.3 - Connect to XL Deploy :
+##  2.3 - Connect to Gogs :
 http://localhost:3000/
-
-Use this credentials to connect to your Gogs :
-root
-password
 
 ## 3 - Do the training
 
