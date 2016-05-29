@@ -16,7 +16,10 @@ services:
         ports:
         - 4516:4516
     gogs:
-        image: gogs/gogs:0.9.13
+        build: docker-gogs/.
         container_name: gogs
         ports:
         - 3000:3000
+    git:
+        build: docker-git/.
+        container_name: git

@@ -1,0 +1,1 @@
+docker exec -it git bash -x /app/clone-and-push.sh

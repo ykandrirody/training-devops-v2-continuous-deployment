@@ -7,18 +7,14 @@
 git clone https://github.com/ykandrirody/training-devops-v2-continuous-deployment.git
 ```
 
-## 1.2 - Download dependencies
+## 1.2 - Pull and build the Docker containers
 ```
 docker-compose -f ./training-devops-v2-continuous-deployment/docker-compose.yml pull
 docker-compose -f ./training-devops-v2-continuous-deployment/docker-compose.yml build
-wget http://updates.jenkins-ci.org/download/plugins/deployit-plugin/5.0.2/deployit-plugin.hpi
-wget http://updates.jenkins-ci.org/download/plugins/scm-api/1.2/scm-api.hpi
-wget http://updates.jenkins-ci.org/download/plugins/git-client/1.19.6/git-client.hpi
-wget http://updates.jenkins-ci.org/download/plugins/git/2.4.4/git.hpi
 ```
 
-## 1.3 - Install dependencies 
-If needed, install flash ( needed by XL Deploy ) :
+## 1.3 - Install Flash 
+If needed, install flash ( needed by XL Deploy ) using :
 ```
 sudo apt-get install flashplugin-installer
 ```
