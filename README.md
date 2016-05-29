@@ -60,7 +60,6 @@ Follow the course materials :
 
 ## 4 - Deallocate resources
 
-Stop all containers :
 ```
 docker-compose -f ./training-devops-v2-continuous-deployment/docker-compose.yml kill
 docker-compose -f ./training-devops-v2-continuous-deployment/docker-compose.yml rm -f -v -a
