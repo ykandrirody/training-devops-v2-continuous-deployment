@@ -1,5 +1,7 @@
 # DevOps Training - Jenkins & XL Deploy - Practical / Usage - using Docker compose
 
+[![Build Status](https://travis-ci.org/ykandrirody/training-devops-v2-continuous-deployment.svg?branch=master)](https://travis-ci.org/ykandrirody/training-devops-v2-continuous-deployment)
+
 # 1 - Preparation (you can be offline after this step)
 
 ## 1.1 - Clone the repository locally
@@ -47,7 +49,8 @@ password
 
 ## 3 - Do the training
 
-Follow the course materials.
+Follow the course materials : [![The practical steps]](https://github.com/ykandrirody/training-devops-v2-continuous-deployment/practical.pdf)
+
 
 Check at the end : 
 ```
