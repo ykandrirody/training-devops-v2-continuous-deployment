@@ -45,6 +45,9 @@ Use this credentials to connect to your XL Deploy :
 admin
 password
 
+##  2.3 - Connect to XL Deploy :
+http://localhost:3000/
+
 Use this credentials to connect to your Gogs :
 root
 password
